@@ -1,4 +1,7 @@
-def calc(a, b):
-    return a+b
+# Sample taken from pyStrich GitHub repository
+# https://github.com/mmulqueen/pyStrich
+from pystrich.datamatrix import DataMatrixEncoder
 
-print(calc(10, 5))
+encoder = DataMatrixEncoder('This is a DataMatrix.')
+encoder.save('./datamatrix_test.png')
+print(encoder.get_ascii())
